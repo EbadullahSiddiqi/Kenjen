@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+body {
+  background: radial-gradient(
+      circle at right top,
+      rgba(122, 173, 71, 0.1),
+      transparent 70%
+    ),
+    radial-gradient(
+      circle at right bottom,
+      rgba(122, 173, 71, 0.1),
+      transparent 70%
+    ),
+    #0d0d0d; /* Main background color */
+  font-family: "Inter", sans-serif;
+  min-height: 100vh; /* Ensures the full viewport height */
+  margin: 0; /* Removes default margin */
+}
+
+.nav-btn {
+  border: solid 1px #7aad47;
+}
