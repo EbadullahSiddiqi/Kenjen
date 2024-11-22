@@ -1,6 +1,7 @@
 import HeroSection from "./Components/HeroSection";
 import Navbar from "./Components/Navbar";
-import Test from "./Components/test";
+import HeroExtraText from "./Components/HeroExtraText";
+import Process from "./Components/Process";
 
 function App() {
   return (
@@ -9,10 +10,8 @@ function App() {
       <div className="pl-10">
         <HeroSection />
       </div>
-      <Test />
-      <Test />
-      <Test />
-      <Test />
+      <HeroExtraText />
+      <Process />
     </div>
   );
 }

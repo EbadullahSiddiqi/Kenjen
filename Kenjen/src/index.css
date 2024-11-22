@@ -15,7 +15,8 @@ body {
       rgba(122, 173, 71, 0.1),
       transparent 70%
     ),
-    #0d0d0d; /* Main background color */
+    #0d0d0d;
+  /* background: linear-gradient(230deg, #7aad47 10%, #0d0d0d 70%); */
   font-family: "Inter", sans-serif;
   min-height: 100vh; /* Ensures the full viewport height */
   margin: 0; /* Removes default margin */
@@ -23,4 +24,13 @@ body {
 
 .nav-btn {
   border: solid 1px #7aad47;
+}
+
+.proces-card {
+  width: 30rem;
+  height: 17rem;
+  border: solid 1px #999999;
+  background-color: rgba(15, 15, 15, 0.2);
+  border-color: rgba(193, 192, 192, 0.268);
+  border-width: 1px;
 }

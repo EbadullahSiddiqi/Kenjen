@@ -27,7 +27,7 @@ const HeroSection = () => {
 
       {/* Mouse follower */}
       <div
-        className="pointer-events-none fixed w-3 h-3 rounded-full bg-[#7AAD47] transform -translate-x-1/2 -translate-y-1/2 transition-all duration-700 ease-out"
+        className="pointer-events-none fixed w-3 h-3 rounded-full bg-basegreen transform -translate-x-1/2 -translate-y-1/2 transition-all duration-700 ease-out"
         style={{
           left: `${mousePosition.x}px`,
           top: `${mousePosition.y}px`,
@@ -44,7 +44,7 @@ const HeroSection = () => {
           Design agency crafting minimal brand identities that speaks volumes.
         </p>
         <div className="flex gap-4 mt-8">
-          <button className="bg-[#7aad47] flex justify-center text-sm text-center p-4 bg-none rounded-xl text-white">
+          <button className="bg-basegreen flex justify-center text-sm text-center p-4 bg-none rounded-xl text-white">
             View plans
           </button>
           <button className="nav-btn flex justify-center text-sm text-center p-4 bg-none rounded-xl text-white">

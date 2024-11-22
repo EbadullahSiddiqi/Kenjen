@@ -6,6 +6,9 @@ export default {
       fontFamily: {
         inter: ["Inter"],
       },
+      colors: {
+        basegreen: "#7AAD47", // Add your custom color here
+      },
     },
   },
   plugins: [],
