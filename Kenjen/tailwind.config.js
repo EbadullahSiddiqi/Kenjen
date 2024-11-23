@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         inter: ["Inter"],
+        parkinsans: ["Parkinsans"]
       },
       colors: {
         basegreen: "#7AAD47", // Add your custom color here

@@ -3,14 +3,14 @@ import ProcessCards from "./ProcessCards";
 
 export default function Process() {
   return (
-    <div className="p-40">
+    <div className="p-36">
       <h1 className="text-5xl text-center text-white leading-tight">
         Our process.
       </h1>
       <p className="text-lg text-gray-400 text-center mt-3">
         Reliable process for achieving distinctiveness.
       </p>
-      <div className="flex flex-wrap gap-4 py-9 px-4">
+      <div className="flex justify-center items-center h-full flex-wrap gap-4 py-9 px-4">
         <ProcessCards
           number="01"
           title="Discovery and Research."

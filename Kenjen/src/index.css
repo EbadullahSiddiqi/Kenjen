@@ -3,9 +3,10 @@
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap");
 
 body {
-  background: radial-gradient(
+  /* background: radial-gradient(
       circle at right top,
       rgba(122, 173, 71, 0.1),
       transparent 70%
@@ -16,10 +17,15 @@ body {
       transparent 70%
     ),
     #0d0d0d;
-  /* background: linear-gradient(230deg, #7aad47 10%, #0d0d0d 70%); */
   font-family: "Inter", sans-serif;
-  min-height: 100vh; /* Ensures the full viewport height */
-  margin: 0; /* Removes default margin */
+  min-height: 100vh; 
+  margin: 0;  */
+
+  background: radial-gradient(
+    circle,
+    rgba(122, 173, 71, 0.7) 0%,
+    rgba(15, 15, 15, 1) 70%
+  );
 }
 
 .nav-btn {
@@ -30,7 +36,24 @@ body {
   width: 30rem;
   height: 17rem;
   border: solid 1px #999999;
-  background-color: rgba(15, 15, 15, 0.2);
+  background-color: rgba(15, 15, 15, 0.525);
+  border-color: rgba(193, 192, 192, 0.456);
+  border-width: 1px;
+}
+
+.work-card {
+  width: 31rem;
+  height: 24rem;
+  border: solid 1px #999999;
+  background-color: rgba(15, 15, 15, 0.525);
   border-color: rgba(193, 192, 192, 0.268);
   border-width: 1px;
+  transition: 500ms;
+}
+.work-card:hover {
+  background: radial-gradient(
+    circle at bottom left,
+    rgba(122, 173, 71, 0.3) 0%,
+    rgba(15, 15, 15, 0.586) 80%
+  );
 }
