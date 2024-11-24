@@ -5,10 +5,19 @@ export default {
     extend: {
       fontFamily: {
         inter: ["Inter"],
-        parkinsans: ["Parkinsans"]
+        parkinsans: ["Parkinsans"],
       },
       colors: {
         basegreen: "#7AAD47", // Add your custom color here
+      },
+      animation: {
+        marquee: "marquee 15s linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
       },
     },
   },

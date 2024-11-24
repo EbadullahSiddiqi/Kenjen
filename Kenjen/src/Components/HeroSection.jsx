@@ -21,45 +21,60 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="p-24 relative min-h-screen overflow-hidden">
+    <div className="p-6 md:p-12 lg:p-24 relative min-h-screen overflow-hidden">
       {/* Gradient overlay */}
       <div className="inset-0 pointer-events-none" />
 
       {/* Mouse follower */}
       <div
-        className="pointer-events-none fixed w-3 h-3 rounded-full bg-basegreen transform -translate-x-1/2 -translate-y-1/2 transition-all duration-700 ease-out"
+        className={`fixed pointer-events-none transform -translate-x-1/2 -translate-y-1/2 transition-all duration-700 ease-out ${
+          localStorage.getItem("cursorFollowerExpand") === "false"
+            ? "w-3 h-3 rounded-full bg-basegreen"
+            : "w-32 h-10 flex justify-center items-center bg-basegreen text-white rounded-3xl"
+        }`}
         style={{
           left: `${mousePosition.x}px`,
           top: `${mousePosition.y}px`,
           boxShadow: "0 0 20px orange",
         }}
-      />
+      >
+        {localStorage.getItem("cursorFollowerExpand") === "true"
+          ? "View Project"
+          : ""}
+      </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 pt-32">
-        <h1 className="text-6xl text-white max-w-4xl">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-24 lg:pt-32">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl text-white max-w-3xl leading-tight">
           Elevate your brand with a timeless minimal logo.
         </h1>
-        <p className="text-lg text-gray-400 mt-6 max-w-2xl">
-          Design agency crafting minimal brand identities that speaks volumes.
+        <p className="text-sm sm:text-lg text-gray-400 mt-4 sm:mt-6 max-w-xl">
+          Design agency crafting minimal brand identities that speak volumes.
         </p>
-        <div className="flex gap-4 mt-8">
-          <button className="bg-basegreen flex justify-center text-sm text-center p-4 bg-none rounded-xl text-white">
+        <div className="flex flex-col sm:flex-row gap-4 mt-6 sm:mt-8">
+          <button className="bg-basegreen text-sm px-6 py-3 rounded-xl text-white">
             View plans
           </button>
-          <button className="nav-btn flex justify-center text-sm text-center p-4 bg-none rounded-xl text-white">
+          <button className="nav-btn text-sm px-6 py-3 rounded-xl text-white">
             Learn more
           </button>
         </div>
       </div>
-      <marquee behavior="scroll" direction="left">
-        <div className="flex gap-7 pt-14">
-          <img className="h-32 w-32" src={logo1} alt="" />
-          <img className="h-32 w-32" src={logo2} alt="" />
-          <img className="h-32 w-32" src={logo5} alt="" />
-          <img className="h-32 w-32" src={logo6} alt="" />
+
+      {/* Logo marquee */}
+      <div className="overflow-hidden mt-10 sm:mt-14">
+        <div className="flex gap-6 animate-marquee whitespace-nowrap">
+          <img className="h-24 w-24 sm:h-32 sm:w-32" src={logo1} alt="Logo 1" />
+          <img className="h-24 w-24 sm:h-32 sm:w-32" src={logo2} alt="Logo 2" />
+          <img className="h-24 w-24 sm:h-32 sm:w-32" src={logo5} alt="Logo 3" />
+          <img className="h-24 w-24 sm:h-32 sm:w-32" src={logo6} alt="Logo 4" />
+          {/* Duplicate logos for seamless loop */}
+          <img className="h-24 w-24 sm:h-32 sm:w-32" src={logo1} alt="Logo 1" />
+          <img className="h-24 w-24 sm:h-32 sm:w-32" src={logo2} alt="Logo 2" />
+          <img className="h-24 w-24 sm:h-32 sm:w-32" src={logo5} alt="Logo 3" />
+          <img className="h-24 w-24 sm:h-32 sm:w-32" src={logo6} alt="Logo 4" />
         </div>
-      </marquee>
+      </div>
     </div>
   );
 };
