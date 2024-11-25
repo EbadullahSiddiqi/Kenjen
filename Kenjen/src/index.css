@@ -50,10 +50,22 @@ body {
   border-width: 1px;
   transition: 500ms;
 }
+
+@media (max-width: 768px) {
+  .work-card {
+    height: 20rem;
+  }
+}
+
 .work-card:hover {
   background: radial-gradient(
     circle at bottom left,
     rgba(122, 173, 71, 0.3) 0%,
     rgba(15, 15, 15, 0.586) 80%
   );
+}
+
+.hero-text {
+  padding-right: 2rem;
+  padding: none;
 }
