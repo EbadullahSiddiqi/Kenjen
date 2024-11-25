@@ -31,20 +31,25 @@ const HeroSection = () => {
 
       {/* Mouse follower */}
       <div
-        className={`fixed pointer-events-none transform -translate-x-1/2 -translate-y-1/2 transition-all duration-700 ease-out hidden md:block ${
+        className={`fixed pointer-events-none transform -translate-x-1/2 -translate-y-1/2 transition-all duration-700 ease-out hidden md:block z-[60] ${
           localStorage.getItem("cursorFollowerExpand") === "false"
             ? "w-3 h-3 rounded-full bg-basegreen"
-            : "w-32 h-10 flex justify-center items-center bg-basegreen text-white rounded-3xl"
+            : "w-32 h-10 flex justify-center items-center bg-orange-500/40 backdrop-blur-lg border border-basegreen text-white rounded-3xl text-center"
         }`}
         style={{
           left: `${mousePosition.x}px`,
           top: `${mousePosition.y}px`,
-          boxShadow: "0 0 20px orange",
+          boxShadow:
+            localStorage.getItem("cursorFollowerExpand") === "false"
+              ? "0 0 20px orange"
+              : "none",
         }}
       >
-        {localStorage.getItem("cursorFollowerExpand") === "true"
-          ? "View Project"
-          : ""}
+        <span className="w-full h-full flex items-center justify-center">
+          {localStorage.getItem("cursorFollowerExpand") === "true"
+            ? "View Project"
+            : ""}
+        </span>
       </div>
 
       {/* Content */}
