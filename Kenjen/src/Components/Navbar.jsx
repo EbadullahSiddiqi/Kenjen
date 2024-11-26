@@ -26,7 +26,7 @@ const Navbar = () => {
         isScrolled ? "bg-none backdrop-blur-md" : "bg-transparent shadow-none"
       }`}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-2 sm:py-4 flex justify-between items-center">
+      <div className="container px-4 sm:px-6 lg:px-8 py-2 sm:py-4 flex justify-around items-center">
         {/* Logo */}
         <a href="/" className="flex items-center">
           <img
@@ -37,41 +37,43 @@ const Navbar = () => {
         </a>
 
         {/* Menu for larger screens */}
-        <div className="hidden lg:flex gap-4 xl:gap-8 items-center">
-          <a
-            href="/about"
-            className="text-sm xl:text-base text-white hover:text-[#7aad47] transition-all duration-200"
-          >
-            Process
-          </a>
-          <a
-            href="/about"
-            className="text-sm xl:text-base text-white hover:text-[#7aad47] transition-all duration-200"
-          >
-            Work
-          </a>
-          <a
-            href="/services"
-            className="text-sm xl:text-base text-white hover:text-[#7aad47] transition-all duration-200"
-          >
-            Services
-          </a>
-          <a
-            href="/contact"
-            className="text-sm xl:text-base text-white hover:text-[#7aad47] transition-all duration-200"
-          >
-            About
-          </a>
-          <a
-            href="/contact"
-            className="text-sm xl:text-base text-white hover:text-[#7aad47] transition-all duration-200"
-          >
-            FAQs
-          </a>
-          <button className="nav-btn flex justify-center text-xs xl:text-sm pl-3 pr-3 xl:pl-4 xl:pr-4 pt-2 pb-2 bg-none rounded-xl text-white border border-[#7aad47] hover:bg-[#7aad47] transition-all duration-200">
-            Book a Call
-          </button>
+        <div className="hidden lg:flex gap-4 xl:gap-8 justify-center items-center">
+          <div className="flex gap-4 xl:gap-8">
+            <a
+              href="/about"
+              className="text-sm xl:text-sm text-white hover:text-[#7aad47] transition-all duration-200"
+            >
+              Process
+            </a>
+            <a
+              href="/about"
+              className="text-sm xl:text-sm text-white hover:text-[#7aad47] transition-all duration-200"
+            >
+              Work
+            </a>
+            <a
+              href="/services"
+              className="text-sm xl:text-sm text-white hover:text-[#7aad47] transition-all duration-200"
+            >
+              Services
+            </a>
+            <a
+              href="/contact"
+              className="text-sm xl:text-sm text-white hover:text-[#7aad47] transition-all duration-200"
+            >
+              About
+            </a>
+            <a
+              href="/contact"
+              className="text-sm xl:text-sm text-white hover:text-[#7aad47] transition-all duration-200"
+            >
+              FAQs
+            </a>
+          </div>
         </div>
+        <button className="hidden lg:flex nav-btn justify-center items-center text-xs xl:text-sm pl-3 pr-3 xl:pl-4 xl:pr-4 pt-2 pb-2 bg-none rounded-xl text-white border border-[#7aad47] hover:text-[#7aad47] transition-all duration-200">
+          Book a Call
+        </button>
 
         {/* Hamburger Menu Button */}
         <button
@@ -105,35 +107,35 @@ const Navbar = () => {
           <div className="flex flex-col gap-4 p-4 sm:p-6">
             <a
               href="/about"
-              className="text-sm sm:text-base text-white hover:text-[#7aad47] transition-all duration-200"
+              className="text-sm sm:text-sm text-white hover:text-[#7aad47] transition-all duration-200"
             >
               Process
             </a>
             <a
               href="/about"
-              className="text-sm sm:text-base text-white hover:text-[#7aad47] transition-all duration-200"
+              className="text-sm sm:text-sm text-white hover:text-[#7aad47] transition-all duration-200"
             >
               Work
             </a>
             <a
               href="/services"
-              className="text-sm sm:text-base text-white hover:text-[#7aad47] transition-all duration-200"
+              className="text-sm sm:text-sm text-white hover:text-[#7aad47] transition-all duration-200"
             >
               Services
             </a>
             <a
               href="/contact"
-              className="text-sm sm:text-base text-white hover:text-[#7aad47] transition-all duration-200"
+              className="text-sm sm:text-sm text-white hover:text-[#7aad47] transition-all duration-200"
             >
               About
             </a>
             <a
               href="/contact"
-              className="text-sm sm:text-base text-white hover:text-[#7aad47] transition-all duration-200"
+              className="text-sm sm:text-sm text-white hover:text-[#7aad47] transition-all duration-200"
             >
               FAQs
             </a>
-            <button className="nav-btn flex justify-center text-sm pl-4 pr-4 pt-2 pb-2 bg-none rounded-xl text-white border border-[#7aad47] hover:bg-[#7aad47] transition-all duration-200 w-full sm:w-auto">
+            <button className="nav-btn-mobile flex justify-center text-sm pl-4 pr-4 pt-2 pb-2 bg-none rounded-xl text-white border border-[#7aad47] hover:text-[#7aad47] transition-all duration-200 w-full sm:w-auto">
               Book a Call
             </button>
           </div>

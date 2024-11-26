@@ -3,6 +3,7 @@ import Navbar from "./Components/Navbar";
 import HeroExtraText from "./Components/HeroExtraText";
 import Process from "./Components/Process";
 import OurWork from "./Components/OurWork";
+import OurResults from "./Components/OurResults";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <HeroExtraText />
       <Process />
       <OurWork />
+      <OurResults />
     </div>
   );
 }

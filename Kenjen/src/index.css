@@ -26,9 +26,20 @@ body {
     rgba(122, 173, 71, 0.7) 0%,
     rgba(15, 15, 15, 1) 70%
   );
+  padding: 0;
 }
 
 .nav-btn {
+  border: solid 1px #7aad47;
+  width: 7rem;
+  height: 3rem;
+}
+
+.nav-btn-mobile {
+  border: solid 1px #7aad47;
+}
+
+.hero-btn {
   border: solid 1px #7aad47;
 }
 
@@ -49,6 +60,15 @@ body {
   border-color: rgba(193, 192, 192, 0.268);
   border-width: 1px;
   transition: 500ms;
+}
+
+.result-card {
+  width: 25rem;
+  height: 15rem;
+  border: solid 1px #999999;
+  background-color: rgba(15, 15, 15, 0.525);
+  border-color: rgba(193, 192, 192, 0.456);
+  border-width: 1px;
 }
 
 @media (max-width: 768px) {

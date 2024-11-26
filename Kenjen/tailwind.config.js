@@ -11,7 +11,7 @@ export default {
         basegreen: "#7AAD47", // Add your custom color here
       },
       animation: {
-        marquee: "marquee 15s linear infinite",
+        marquee: "marquee 8s infinite",
       },
       keyframes: {
         marquee: {

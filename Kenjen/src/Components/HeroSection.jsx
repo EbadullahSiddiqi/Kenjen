@@ -70,7 +70,7 @@ const HeroSection = () => {
             <button className="bg-basegreen text-sm px-6 py-3 rounded-xl text-white">
               View plans
             </button>
-            <button className="nav-btn text-sm px-6 py-3 rounded-xl text-white">
+            <button className="hero-btn text-sm px-6 py-3 rounded-xl text-white">
               Learn more
             </button>
           </div>
