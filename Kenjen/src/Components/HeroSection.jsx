@@ -25,6 +25,8 @@ const HeroSection = () => {
   };
 
   return (
+    <>
+    <div className="bg-circle bg-basegreen rounded-full blur-3xl absolute"></div>
     <div className="p-6 md:p-12 lg:p-24 relative min-h-screen overflow-hidden">
       {/* Gradient overlay */}
       <div className="inset-0 pointer-events-none" />
@@ -124,6 +126,7 @@ const HeroSection = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
