@@ -37,7 +37,7 @@ body {
   width: 20rem;
 }
 
-@media (max-width: 340px) {
+@media (max-width: 500px) {
   .bg-circle {
     left: 5rem;
     top: -7rem;
@@ -86,7 +86,6 @@ body {
     padding: 8rem;
     display: flex;
     justify-content: center;
-    
   }
 }
 
