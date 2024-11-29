@@ -4,6 +4,8 @@ import HeroExtraText from "./Components/HeroExtraText";
 import Process from "./Components/Process";
 import OurWork from "./Components/OurWork";
 import OurResults from "./Components/OurResults";
+import OurServices from "./Components/OurServices";
+import OurTeam from "./Components/OurTeam";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       <Process />
       <OurWork />
       <OurResults />
+      <OurServices />
+      <OurTeam />
     </div>
   );
 }

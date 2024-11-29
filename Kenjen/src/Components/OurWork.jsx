@@ -4,10 +4,10 @@ import WorkCards from "./WorkCards";
 export default function OurWork() {
   return (
     <div className="p-10">
-      <h1 className="text-5xl text-center text-white leading-tight">
+      <h1 className="xl:text-5xl  xs:text-3xl text-center text-white leading-tight">
         Our work.
       </h1>
-      <p className="text-lg text-gray-400 text-center mt-3">
+      <p className="text-lg text-[#D6D6D6] text-center mt-3">
         View our expertly crafted minimal logos, designed to convey simplicity
         and elegance.
       </p>

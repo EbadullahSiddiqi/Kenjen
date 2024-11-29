@@ -4,10 +4,10 @@ import ResultCards from "./ResultCards";
 export default function OurResults() {
   return (
     <div className="p-14 pt-28">
-      <h1 className="text-5xl text-center text-white leading-tight">
+      <h1 className="xl:text-5xl  xs:text-3xl text-center text-white leading-tight">
         Our Results
       </h1>
-      <p className="text-lg text-gray-400 text-center mt-3">
+      <p className="text-lg text-[#D6D6D6] text-center mt-3">
         Hear what our clients have to say about out team and our services.
       </p>
       <div className="overflow-hidden mt-10 sm:mt-14">

@@ -3,6 +3,7 @@ import React from "react";
 export default function ProcessCards({ software }) {
   const changeCursorFollower = () => {
     localStorage.setItem("cursorFollowerExpand", "true");
+    localStorage.setItem("cursorFollowerStatus", "work");
   };
 
   const changeCursorFollowerBack = () => {

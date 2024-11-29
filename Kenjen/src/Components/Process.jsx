@@ -7,7 +7,7 @@ export default function Process() {
       <h1 className="text-3xl sm:text-4xl md:text-5xl text-center text-white leading-tight">
         Our process.
       </h1>
-      <p className="text-base sm:text-lg text-gray-400 text-center mt-3">
+      <p className="text-base sm:text-lg text-[#D6D6D6] text-center mt-3">
         Reliable process for achieving distinctiveness.
       </p>
       <div className="flex justify-center items-center h-full flex-wrap gap-6 py-6 px-4">
