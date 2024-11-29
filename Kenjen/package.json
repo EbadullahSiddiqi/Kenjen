@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "flowbite-react": "^0.10.2",
+    "mdb-react-ui-kit": "^9.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "swiper": "^11.1.15"
@@ -21,6 +22,7 @@
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.3",
     "autoprefixer": "^10.4.20",
+    "daisyui": "^4.12.14",
     "eslint": "^9.13.0",
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^5.0.0",

@@ -1,6 +1,12 @@
 import React from "react";
 
-export default function ServiceCards({ type, price, description, items, priority }) {
+export default function ServiceCards({
+  type,
+  price,
+  description,
+  items,
+  priority,
+}) {
   return (
     <div className="service-card rounded-xl border w-full max-w-full sm:max-w-sm md:max-w-md lg:max-w-lg bg-black/30 overflow-hidden">
       <div className="flex flex-col p-4 sm:p-6 md:p-8 gap-3 sm:gap-4 md:gap-6">
@@ -20,7 +26,13 @@ export default function ServiceCards({ type, price, description, items, priority
           ))}
         </ul>
 
-        <button className="w-full h-[3.5rem] rounded-xl text-white text-sm bg-basegreen">
+        <button
+          className={`${
+            priority
+              ? "w-full h-[3.5rem] rounded-xl text-white text-sm bg-basegreen"
+              : "service-btn-non-priority w-full h-[3.5rem] rounded-xl text-white text-sm bg-transparent"
+          }`}
+        >
           Get Started
         </button>
       </div>
