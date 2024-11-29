@@ -32,14 +32,14 @@ body {
 
 .bg-circle {
   left: 45rem;
-  top: -7rem;
+  top: -8rem;
   height: 20rem;
   width: 20rem;
 }
 
-@media (max-width: 4000px) {
+@media (max-width: 340px) {
   .bg-circle {
-    left: 10rem;
+    left: 5rem;
     top: -7rem;
     height: 20rem;
     width: 10rem;
@@ -65,7 +65,7 @@ body {
   height: 17rem;
   border: solid 1px #999999;
   background-color: rgba(15, 15, 15, 0.525);
-  border-color: rgba(193, 192, 192, 0.456);
+  border-color: rgba(193, 192, 192, 0.207);
   border-width: 1px;
 }
 
@@ -74,9 +74,20 @@ body {
   height: 24rem;
   border: solid 1px #999999;
   background-color: rgba(15, 15, 15, 0.525);
-  border-color: rgba(193, 192, 192, 0.268);
+  border-color: rgba(193, 192, 192, 0.207);
   border-width: 1px;
   transition: 500ms;
+}
+
+@media (max-width: 340px) {
+  .work-card {
+    height: 20rem;
+    width: 20rem;
+    padding: 8rem;
+    display: flex;
+    justify-content: center;
+    
+  }
 }
 
 .result-card {
@@ -88,11 +99,7 @@ body {
   border-width: 1px;
 }
 
-@media (max-width: 768px) {
-  .work-card {
-    height: 20rem;
-  }
-}
+
 
 .work-card:hover {
   background: radial-gradient(
