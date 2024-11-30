@@ -8,8 +8,11 @@ export default function ServiceCards({
   priority,
 }) {
   return (
-    <div className="service-card rounded-xl border w-full max-w-full sm:max-w-sm md:max-w-md lg:max-w-lg bg-black/30 overflow-hidden">
-      <div className="flex flex-col p-4 sm:p-6 md:p-8 gap-3 sm:gap-4 md:gap-6">
+    <div className="service-card rounded-xl border w-full max-w-full sm:max-w-sm md:max-w-md lg:max-w-lg bg-black/30 relative overflow-hidden">
+      {priority && (
+        <div className="service-grad bg-basegreen rounded-full blur-3xl absolute"></div>
+      )}
+      <div className="flex flex-col p-4 sm:p-6 md:p-8 gap-3 sm:gap-4 md:gap-6 relative z-10">
         <p className="text-basegreen text-base sm:text-xl md:text-base">
           {type}
         </p>
@@ -36,9 +39,6 @@ export default function ServiceCards({
           Get Started
         </button>
       </div>
-      {priority && (
-        <div className="service-grad -z-30 bg-basegreen rounded-full blur-3xl relative"></div>
-      )}
     </div>
   );
 }

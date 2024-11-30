@@ -117,7 +117,8 @@ body {
 }
 
 .service-grad {
-  top: -20rem;
+  top: 15rem;
+  left: 5rem;
   height: 20rem;
   width: 20rem;
 }
