@@ -69,11 +69,11 @@ const HeroSection = () => {
             {/*mx-auto pr-0 sm:px-6 lg:px-8 pt-16 sm:pt-24 lg:pt-32 */}
             <div className="flex flex-col text-center w-full">
               <h1 className="text-white text-4xl lg:text-6xl lg:text-start">
-                Elevate your brand with a <br /> timeless minimal logo.
+                Elevate your business with custom software solutions.
               </h1>
-              <p className="text-sm sm:text-lg text-gray-400 mt-4 sm:mt-6 max-w-xl lg:text-start">
-                Design agency crafting minimal brand identities that speak
-                volumes.
+              <p className="text-sm sm:text-lg text-[#D6D6D6] mt-4 sm:mt-6 max-w-xl lg:text-start">
+                Custom software solutions that deliver powerful results with
+                simplicity and clarity.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 mt-6 sm:mt-8">

@@ -13,31 +13,31 @@ export default function Process() {
       <div className="flex justify-center items-center h-full flex-wrap gap-6 py-6 px-4">
         <ProcessCards
           number="01"
-          title="Discovery and Research."
-          item1="Understand the client's values and audience."
-          item2="Conduct market research."
-          item3="Identify key design elements."
+          title="Discovery and Analysis."
+          item1="Understand the client's goals and challenges."
+          item2="Assess industry trends and competition."
+          item3="Define core functionalities and requirements."
         />
         <ProcessCards
           number="02"
-          title="Concept Development."
-          item1="Brainstorm and sketch initial logo concepts."
-          item2="Focus on simplicity."
-          item3="Prioritise ideas for further development."
+          title="Planning and Ideation."
+          item1="Brainstorm innovative software solutions."
+          item2="Map out workflows and system architecture."
+          item3="Prioritize features for initial development."
         />
         <ProcessCards
           number="03"
-          title="Design and Refinement."
-          item1="Create digital versions of prioritised concepts."
-          item2="Refine the designs, ensuring clarity."
-          item3="Incorporate client feedback to fine-tuning."
+          title="Development and Refinement."
+          item1="Build the software with a focus on usability."
+          item2="Test thoroughly to ensure reliability."
+          item3="Iterate based on client feedback."
         />
         <ProcessCards
           number="04"
-          title="Finalisation and Delivery."
-          item1="Prepare the final logo in various formats."
-          item2="Provide a comprehensive brand guide."
-          item3="Deliver the final assets and support."
+          title="Deployment and Support."
+          item1="Launch the final product with full functionality."
+          item2="Provide documentation and training needed."
+          item3="Offer support for optimal performance."
         />
       </div>
     </div>
