@@ -3,10 +3,38 @@ import logo2 from "../assets/logo2.png";
 import logo5 from "../assets/logo5.png";
 import logo6 from "../assets/logo6.png";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const HeroSection = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const titleRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            entry.target.classList.remove('fade-out');
+          } else {
+            entry.target.classList.add('fade-out');
+            entry.target.classList.remove('fade-in');
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '-50px' }
+    );
+
+    if (titleRef.current) {
+      observer.observe(titleRef.current);
+    }
+
+    return () => {
+      if (titleRef.current) {
+        observer.unobserve(titleRef.current);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     localStorage.setItem("cursorFollowerExpand", "false");
@@ -72,7 +100,7 @@ const HeroSection = () => {
             {" "}
             {/*mx-auto pr-0 sm:px-6 lg:px-8 pt-16 sm:pt-24 lg:pt-32 */}
             <div className="flex flex-col text-center w-full">
-              <h1 className="text-white text-4xl lg:text-6xl lg:text-start">
+              <h1 ref={titleRef} className="text-white text-4xl lg:text-6xl lg:text-start opacity-0">
                 Elevate your business with custom software solutions.
               </h1>
               <p className="text-sm sm:text-lg text-[#D6D6D6] mt-4 sm:mt-6 max-w-xl lg:text-start">
@@ -91,49 +119,23 @@ const HeroSection = () => {
           </div>
 
           {/* Logo marquee */}
-          <div className="overflow-hidden mt-10 sm:mt-14">
-            <div className="flex gap-6 animate-marquee whitespace-nowrap">
-              <img
-                className="h-24 w-24 sm:h-32 sm:w-32"
-                src={logo1}
-                alt="Logo 1"
-              />
-              <img
-                className="h-24 w-24 sm:h-32 sm:w-32"
-                src={logo2}
-                alt="Logo 2"
-              />
-              <img
-                className="h-24 w-24 sm:h-32 sm:w-32"
-                src={logo5}
-                alt="Logo 3"
-              />
-              <img
-                className="h-24 w-24 sm:h-32 sm:w-32"
-                src={logo6}
-                alt="Logo 4"
-              />
-              {/* Duplicate logos for seamless loop */}
-              <img
-                className="h-24 w-24 sm:h-32 sm:w-32"
-                src={logo1}
-                alt="Logo 1"
-              />
-              <img
-                className="h-24 w-24 sm:h-32 sm:w-32"
-                src={logo2}
-                alt="Logo 2"
-              />
-              <img
-                className="h-24 w-24 sm:h-32 sm:w-32"
-                src={logo5}
-                alt="Logo 3"
-              />
-              <img
-                className="h-24 w-24 sm:h-32 sm:w-32"
-                src={logo6}
-                alt="Logo 4"
-              />
+          <div className="relative w-full overflow-hidden marquee-container">
+            {/* Main scroll container */}
+            <div className="flex w-fit animate-marquee">
+              {/* First set of logos */}
+              <div className="flex gap-20 px-4">
+                <img className="h-24 w-24 sm:h-32 sm:w-32" src={logo1} alt="Logo 1" />
+                <img className="h-24 w-24 sm:h-32 sm:w-32" src={logo2} alt="Logo 2" />
+                <img className="h-24 w-24 sm:h-32 sm:w-32" src={logo5} alt="Logo 3" />
+                <img className="h-24 w-24 sm:h-32 sm:w-32" src={logo6} alt="Logo 4" />
+              </div>
+              {/* Duplicate set for seamless loop */}
+              <div className="flex gap-6 px-4">
+                <img className="h-24 w-24 sm:h-32 sm:w-32" src={logo1} alt="Logo 1" />
+                <img className="h-24 w-24 sm:h-32 sm:w-32" src={logo2} alt="Logo 2" />
+                <img className="h-24 w-24 sm:h-32 sm:w-32" src={logo5} alt="Logo 3" />
+                <img className="h-24 w-24 sm:h-32 sm:w-32" src={logo6} alt="Logo 4" />
+              </div>
             </div>
           </div>
         </div>

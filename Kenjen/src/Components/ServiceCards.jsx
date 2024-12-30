@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 export default function ServiceCards({
   type,
@@ -7,8 +7,37 @@ export default function ServiceCards({
   items,
   priority,
 }) {
+  const cardRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            entry.target.classList.remove('fade-out');
+          } else {
+            entry.target.classList.add('fade-out');
+            entry.target.classList.remove('fade-in');
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '-50px' }
+    );
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+
+    return () => {
+      if (cardRef.current) {
+        observer.unobserve(cardRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="service-card rounded-xl border w-full max-w-full sm:max-w-sm md:max-w-md lg:max-w-lg bg-black/30 relative overflow-hidden">
+    <div ref={cardRef} className="service-card rounded-xl border w-full max-w-full sm:max-w-sm md:max-w-md lg:max-w-lg bg-black/30 relative overflow-hidden opacity-0">
       {priority && (
         <div className="service-grad bg-basegreen rounded-full blur-3xl absolute"></div>
       )}

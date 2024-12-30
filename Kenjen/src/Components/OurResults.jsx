@@ -1,10 +1,39 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import ResultCards from "./ResultCards";
 
 export default function OurResults() {
+  const titleRef = useRef(null);
+  
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            entry.target.classList.remove('fade-out');
+          } else {
+            entry.target.classList.add('fade-out');
+            entry.target.classList.remove('fade-in');
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '-50px' }
+    );
+
+    if (titleRef.current) {
+      observer.observe(titleRef.current);
+    }
+
+    return () => {
+      if (titleRef.current) {
+        observer.unobserve(titleRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div className="p-14 pt-28">
-      <h1 className="xl:text-5xl  xs:text-3xl text-center text-white leading-tight">
+      <h1 ref={titleRef} className="xl:text-5xl xs:text-3xl text-center text-white leading-tight opacity-0">
         Our Results
       </h1>
       <p className="text-lg text-[#D6D6D6] text-center mt-3">

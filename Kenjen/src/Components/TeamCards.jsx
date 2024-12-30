@@ -1,6 +1,35 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 export default function ({ img, name, role }) {
+  const cardRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            entry.target.classList.remove('fade-out');
+          } else {
+            entry.target.classList.add('fade-out');
+            entry.target.classList.remove('fade-in');
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '-50px' }
+    );
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+
+    return () => {
+      if (cardRef.current) {
+        observer.unobserve(cardRef.current);
+      }
+    };
+  }, []);
+
   const changeCursorFollower = () => {
     localStorage.setItem("cursorFollowerExpand", "true");
     localStorage.setItem("cursorFollowerStatus", "profile");
@@ -11,7 +40,7 @@ export default function ({ img, name, role }) {
   };
 
   return (
-    <div className="relative cursor-pointer">
+    <div ref={cardRef} className="relative cursor-pointer opacity-0">
       <img
         onMouseEnter={changeCursorFollower}
         onMouseLeave={changeCursorFollowerBack}

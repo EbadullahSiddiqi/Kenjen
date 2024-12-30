@@ -5,9 +5,7 @@ export default function FaqsCard() {
     <div className="faq-card py-3 overflow-auto">
       <div className="collapse text-white collapse-plus bg-transparent">
         <input
-          type="radio"
-          name="my-accordion-3"
-          // defaultChecked
+          type="checkbox"
           className="bg-basegreen"
         />
         <div className="collapse-title text-xl font-medium">
@@ -22,7 +20,7 @@ export default function FaqsCard() {
       </div>
 
       <div className="collapse collapse-plus text-white bg-transparent">
-        <input type="radio" name="my-accordion-3" />
+        <input type="checkbox" />
         <div className="collapse-title text-xl font-medium">
           How do you ensure the software meets my needs?
         </div>
@@ -35,7 +33,7 @@ export default function FaqsCard() {
       </div>
 
       <div className="collapse collapse-plus text-white bg-transparent">
-        <input type="radio" name="my-accordion-3" />
+        <input type="checkbox" />
         <div className="collapse-title text-xl font-medium">
           What industries do you serve?
         </div>
@@ -48,7 +46,7 @@ export default function FaqsCard() {
       </div>
 
       <div className="collapse collapse-plus text-white bg-transparent">
-        <input type="radio" name="my-accordion-3" />
+        <input type="checkbox" />
         <div className="collapse-title text-xl font-medium">
           What makes Kenjen unique?
         </div>
@@ -61,7 +59,7 @@ export default function FaqsCard() {
       </div>
 
       <div className="collapse collapse-plus text-white bg-transparent">
-        <input type="radio" name="my-accordion-3" />
+        <input type="checkbox" />
         <div className="collapse-title text-xl font-medium">
           How long does a project take?
         </div>

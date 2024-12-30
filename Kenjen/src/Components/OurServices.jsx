@@ -1,7 +1,36 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import ServiceCards from "./ServiceCards";
 
 export default function OurServices() {
+  const titleRef = useRef(null);
+  
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            entry.target.classList.remove('fade-out');
+          } else {
+            entry.target.classList.add('fade-out');
+            entry.target.classList.remove('fade-in');
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '-50px' }
+    );
+
+    if (titleRef.current) {
+      observer.observe(titleRef.current);
+    }
+
+    return () => {
+      if (titleRef.current) {
+        observer.unobserve(titleRef.current);
+      }
+    };
+  }, []);
+
   const list1 = [
     "Core software functionality",
     "Optimized performance",
@@ -20,7 +49,7 @@ export default function OurServices() {
 
   return (
     <div className="service sm:text-4xl p-10 sm:p-4 mt-28">
-      <h1 className="xl:text-5xl text-center xs:text-3xl text-white leading-tight">
+      <h1 ref={titleRef} className="xl:text-5xl text-center xs:text-3xl text-white leading-tight opacity-0">
         Our services.
       </h1>
       <p className="text-lg text-[#D6D6D6] text-center mt-3">
@@ -29,14 +58,14 @@ export default function OurServices() {
       <div className="flex justify-center items-center h-full flex-wrap gap-4 py-9 px-4">
         <ServiceCards
           type="Standard"
-          price="$2,499"
+          price="Rs. 30,000"
           description="Acquire the software quickly with a one time payment with cutomer support."
           items={list1}
           priority={true}
         />
         <ServiceCards
           type="Monthly"
-          price="$199/m"
+          price="Rs. 5000/m"
           description="Acquire the software quickly with a one time payment with cutomer support."
           items={list2}
         />
